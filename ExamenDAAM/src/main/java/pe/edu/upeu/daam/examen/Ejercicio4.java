@@ -2,35 +2,35 @@ package pe.edu.upeu.daam.examen;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    private static Scanner in = new Scanner(System.in);
+    private static Scanner inDAAM= new Scanner(System.in);
 
         public static void main(String[] args) {
-            int x,y;
+            int xDAAM,yDAAM;
             System.out.println("ingrese la base:  ");
-            x = in.nextInt();
+            xDAAM = inDAAM.nextInt();
             System.out.println("Ingrese el exponente:  ");
-            y = in.nextInt();            
+            yDAAM = inDAAM.nextInt();            
     
 
-            int base = x;
-            int exponente = y;
+            int baseDAAM = xDAAM;
+            int exponenteDAAM = yDAAM;
             System.out.println("Respuesta:");
     
-            System.out.println(potencia(base, exponente));
+            System.out.println(potencia(baseDAAM, exponenteDAAM));
             
     
         }
     
-        public static double potencia(int base, int exponente) {
+        public static double potencia(int baseDAAM, int exponenteDAAM) {
             
-            if (exponente == 0) { 
+            if (exponenteDAAM == 0) { 
                 return 1; 
-            } else if (exponente == 1) { 
-                return base; 
-            } else if (exponente < 0) { 
-                return potencia(base, exponente + 1) / base;
+            } else if (exponenteDAAM == 1) { 
+                return baseDAAM; 
+            } else if (exponenteDAAM < 0) { 
+                return potencia(baseDAAM, exponenteDAAM + 1) / baseDAAM;
             } else {  
-                return base * potencia(base, exponente - 1);
+                return baseDAAM * potencia(baseDAAM, exponenteDAAM - 1);
             }
 
             
